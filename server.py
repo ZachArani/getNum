@@ -13,7 +13,7 @@ class S(BaseHTTPRequestHandler):
         #self.wfile.write(round(uniform(1,1000000)).to_bytes(3,byteorder='big'))
         self.wfile.write("{}".format(round(uniform(1,1000000))).encode('utf-8'))
 
-def run(server_class=HTTPServer, handler_class=S, port=8080):
+def run(server_class=HTTPServer, handler_class=S, port=80):
     logging.basicConfig(level=logging.INFO)
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
