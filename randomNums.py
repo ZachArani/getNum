@@ -8,4 +8,4 @@ for i in range (1000):
 		d.append(num)
 
 def get_num():
-	return int(urllib.request.urlopen("http://localhost:8080").read())
+	return int(urllib.request.urlopen("http://35.193.172.12:8080").read())
