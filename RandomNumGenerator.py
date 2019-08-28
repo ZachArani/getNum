@@ -13,7 +13,7 @@ class RandomGen:
         This method, uses the deque data structure to keep track of the last 750 generated
         random number.
 
-        :returns A unique from last 750 generation random number from 1 to 1 Million.
+        :returns Unique from last 750 generation, a random number from 1 to 1 Million.
         """
         num = self.get_random_num()
         while num not in self.queue:
