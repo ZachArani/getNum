@@ -17,7 +17,7 @@ class S(BaseHTTPRequestHandler):
 
     def do_GET(self):
         """Defines what the get response is. It is the random number that generated"""
-        # TODO: create the user management if necessary. 
+        # TODO: create the user management if necessary.
         logging.info("GET request,\nPath: %s\nHeaders:\n%s\n", str(self.path), str(self.headers))
         self._set_response()
         self.wfile.write("{}".format(self.randGen.get_num()).encode('utf-8'))
