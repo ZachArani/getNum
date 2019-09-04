@@ -1,0 +1,13 @@
+[Unit]
+Description=A random Number gen
+After=network.target
+
+[Service]
+User=<yourusername>
+Group=www-data
+WorkingDirectory=/<address to host directory>
+Environment="PATH=/<address to host directory>/env/bin"
+ExecStart=/<address to host directory>/env/bin/uwsgi --ini app.ini
+
+[Install]
+WantedBy=multi-user.target
