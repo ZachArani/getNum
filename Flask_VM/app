@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name <your_ip_address>;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/<address to host directory>/app.sock;
+    }
+}
